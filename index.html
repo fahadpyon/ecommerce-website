@@ -1,34 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- general meta tags -->
-  <meta charset="utf-8">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- site specific tags -->
-  <title></title>
-  <!-- style sheets -->
+  <!-- General Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your one-stop shop for PC parts, monitors, and electronics.">
+  
+  <!-- Site Title -->
+  <title>Tech Shop - Home</title>
+
+  <!-- Style Sheets -->
   <link rel="stylesheet" href="css-reset.css">
-  <link rel="stylesheet" href=".css">
-  <!-- javascript files -->
-  <script src=".js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JavaScript Files -->
+  <script src="script.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      background-color: #444;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .hero {
+      background-image: url('tech-background.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+    }
+
+    .featured {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .featured h3 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .featured-items {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .featured-item {
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #ddd;
+      width: 250px;
+      text-align: center;
+    }
+
+    .featured-item img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .featured-item h4 {
+      font-size: 1.5em;
+      margin: 15px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+  </style>
 </head>
 <body>
   <header>
-    
+    <h1>Welcome to Tech Shop</h1>
     <nav>
-      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
   </header>
+
   <main>
-    <section>
-      <article>
-        
-      </article>
+    <section class="hero">
+      <h2>Your One-Stop Shop for PC Parts & Electronics</h2>
+    </section>
+
+    <section class="featured">
+      <h3>Featured Products</h3>
+      <div class="featured-items">
+        <div class="featured-item">
+          <img src="pc-part1.jpg" alt="PC Part 1">
+          <h4>High-Performance CPU</h4>
+          <p>$299.99</p>
+        </div>
+        <div class="featured-item">
+          <img src="monitor1.jpg" alt="Monitor 1">
+          <h4>4K Ultra HD Monitor</h4>
+          <p>$499.99</p>
+        </div>
+        <div class="featured-item">
+          <img src="keyboard1.jpg" alt="Gaming Keyboard">
+          <h4>RGB Gaming Keyboard</h4>
+          <p>$89.99</p>
+        </div>
+      </div>
     </section>
   </main>
+
   <footer>
-    
+    <p>&copy; 2024 Tech Shop. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
