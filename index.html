@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- General Meta Tags -->
   <meta charset="UTF-8">
-  <meta name="author" content="Your Name">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Your one-stop shop for PC parts, monitors, and electronics.">
-  
-  <!-- Site Title -->
+  <meta name="author" content="Your Name">
   <title>Tech Shop - Home</title>
 
-  <!-- Link to Style Sheet -->
-  <link rel="stylesheet" href="css-reset.css">
-  <link rel="stylesheet" href="mainstyles.css"> <!-- This is your external CSS file -->
-
-  <!-- JavaScript Files -->
-  <script src="script.js"></script>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="mainstyles.css"> <!-- Updated to mainstyles.css -->
 </head>
 <body>
   <header>
@@ -31,27 +24,32 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Your One-Stop Shop for PC Parts & Electronics</h2>
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('tech-hero.jpg');">
+      <h2>Your Trusted Source for Tech Products</h2>
+      <p>Discover our wide range of products including the latest in PC hardware, monitors, accessories, and more.</p>
+      <a href="shop.html" class="cta-button">Shop Now</a>
     </section>
+    
 
-    <section class="featured">
-      <h3>Featured Products</h3>
-      <div class="featured-items">
-        <div class="featured-item">
-          <img src="pc-part1.jpg" alt="PC Part 1">
-          <h4>High-Performance CPU</h4>
-          <p>$299.99</p>
+    <!-- Featured Categories -->
+    <section class="home-featured-categories">
+      <h3>Explore Our Categories</h3>
+      <div class="category-grid">
+        <div class="category-item">
+          <img src="category-pc.jpg" alt="PC Parts">
+          <h4>PC Parts</h4>
+          <p>Find everything you need to build the perfect PC.</p>
         </div>
-        <div class="featured-item">
-          <img src="monitor1.jpg" alt="Monitor 1">
-          <h4>4K Ultra HD Monitor</h4>
-          <p>$499.99</p>
+        <div class="category-item">
+          <img src="category-monitor.jpg" alt="Monitors">
+          <h4>Monitors</h4>
+          <p>Explore our range of 4K, Ultra HD, and gaming monitors.</p>
         </div>
-        <div class="featured-item">
-          <img src="keyboard1.jpg" alt="Gaming Keyboard">
-          <h4>RGB Gaming Keyboard</h4>
-          <p>$89.99</p>
+        <div class="category-item">
+          <img src="category-accessories.jpg" alt="Accessories">
+          <h4>Accessories</h4>
+          <p>Get the best keyboards, mice, and more to complete your setup.</p>
         </div>
       </div>
     </section>
