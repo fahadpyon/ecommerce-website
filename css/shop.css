@@ -1,0 +1,122 @@
+/* Global Styles for Shop Page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #E5E5E5; /* Light gray background */
+  color: #333333; /* Dark text color */
+}
+
+/* Header */
+header {
+  background-color: #8B00FF; /* Purple header */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #1E90FF; /* Sea blue background for navigation */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #FFD700; /* Gold hover effect */
+  border-radius: 5px;
+}
+
+/* Shop Hero Section */
+.shop-hero {
+  background-image: url('shop-hero.jpg'); /* Use your actual image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.shop-hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.shop-hero p {
+  font-size: 1.3em;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Product Grid */
+.shop-featured-products {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.shop-featured-products h3 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-item {
+  background-color: #8B00FF; /* Purple box background */
+  color: #FFD700; /* Yellow text */
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(30, 144, 255, 0.3); /* Sea blue shadow */
+}
+
+.product-item h4 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+  background-color: #1E90FF; /* Sea blue footer */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

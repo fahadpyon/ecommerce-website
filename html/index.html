@@ -8,7 +8,9 @@
   <title>Tech Shop - Home</title>
 
   <!-- Link to CSS -->
-  <link rel="stylesheet" href="mainstyles.css"> <!-- Updated to mainstyles.css -->
+  <link rel="stylesheet" href="/css/css-reset.css">
+  <link rel="stylesheet" href="/css/home.css"> <!-- Or the appropriate page-specific CSS -->
+
 </head>
 <body>
   <header>
@@ -37,22 +39,35 @@
       <h3>Explore Our Categories</h3>
       <div class="category-grid">
         <div class="category-item">
-          <img src="category-pc.jpg" alt="PC Parts">
+          <img src="images\category-pc.png" alt="PC Parts">
           <h4>PC Parts</h4>
           <p>Find everything you need to build the perfect PC.</p>
         </div>
         <div class="category-item">
-          <img src="category-monitor.jpg" alt="Monitors">
+          <img src="images\category-monitor.jpg" alt="Monitors">
           <h4>Monitors</h4>
           <p>Explore our range of 4K, Ultra HD, and gaming monitors.</p>
         </div>
         <div class="category-item">
-          <img src="category-accessories.jpg" alt="Accessories">
+          <img src="images\category-accessories.jpg" alt="Accessories">
           <h4>Accessories</h4>
           <p>Get the best keyboards, mice, and more to complete your setup.</p>
         </div>
       </div>
     </section>
+    <section class="comment-section">
+      <h3>Share Your Thoughts</h3>
+      <form class="comment-form">
+        <textarea id="comment" name="comment" placeholder="Add a comment..." rows="4" required></textarea>
+        <button type="submit">Post Comment</button>
+      </form>
+    
+      <!-- Placeholder for the list of comments -->
+      <div class="comments-list">
+        <p>No comments yet. Be the first to share your thoughts!</p>
+      </div>
+    </section>
+    
   </main>
 
   <footer>

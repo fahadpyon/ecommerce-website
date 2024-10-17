@@ -1,0 +1,156 @@
+/* Global Styles for Home Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5; /* Light gray background */
+    color: #333333; /* Dark text color */
+  }
+  
+  /* Header */
+  header {
+    background-color: #8B00FF; /* Purple header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #1E90FF; /* Sea blue background for navigation */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #FFD700; /* Gold hover effect */
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  .home-hero {
+    background-image: url('tech-hero.jpg'); /* Use your actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .home-hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .home-hero p {
+    font-size: 1.3em;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Featured Categories */
+  .home-featured-categories {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .home-featured-categories h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  
+  .category-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .category-item {
+    background-color: #8B00FF; /* Purple box background */
+    color: #FFD700; /* Yellow text */
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(30, 144, 255, 0.3); /* Sea blue shadow */
+  }
+  
+  .category-item h4 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  /* Comment Section */
+  .comment-section {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .comment-section textarea {
+    width: 80%;
+    max-width: 600px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+  }
+  
+  .comment-section button {
+    padding: 10px 20px;
+    background-color: #1E90FF; /* Sea blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .comment-section button:hover {
+    background-color: #8B00FF; /* Purple hover effect */
+  }
+  
+  .no-comments {
+    font-size: 1.1em;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1E90FF; /* Sea blue footer */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
