@@ -10,7 +10,6 @@
   <!-- Link to CSS -->
   <link rel="stylesheet" href="/css/css-reset.css">
   <link rel="stylesheet" href="/css/home.css"> <!-- Or the appropriate page-specific CSS -->
-
 </head>
 <body>
   <header>
@@ -22,6 +21,11 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
+      <!-- Search Form (Top-right) -->
+      <form class="search-form" onsubmit="return false;">
+        <input type="text" id="search-query" name="search-query" placeholder="Search for products..." required>
+        <button type="submit" onclick="performSearch()">🔍</button>
+      </form>
     </nav>
   </header>
 
@@ -32,29 +36,66 @@
       <p>Discover our wide range of products including the latest in PC hardware, monitors, accessories, and more.</p>
       <a href="shop.html" class="cta-button">Shop Now</a>
     </section>
-    
 
     <!-- Featured Categories -->
     <section class="home-featured-categories">
       <h3>Explore Our Categories</h3>
       <div class="category-grid">
         <div class="category-item">
-          <img src="images\category-pc.png" alt="PC Parts">
+          <img src="images/category-pc.png" alt="PC Parts">
           <h4>PC Parts</h4>
           <p>Find everything you need to build the perfect PC.</p>
         </div>
         <div class="category-item">
-          <img src="images\category-monitor.jpg" alt="Monitors">
+          <img src="images/category-monitor.jpg" alt="Monitors">
           <h4>Monitors</h4>
           <p>Explore our range of 4K, Ultra HD, and gaming monitors.</p>
         </div>
         <div class="category-item">
-          <img src="images\category-accessories.jpg" alt="Accessories">
+          <img src="images/category-accessories.jpg" alt="Accessories">
           <h4>Accessories</h4>
           <p>Get the best keyboards, mice, and more to complete your setup.</p>
         </div>
       </div>
     </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      
+      <!-- Table for displaying search results -->
+      <div class="search-results">
+        <h4>Search Results</h4>
+        <table border="1" cellpadding="10">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Category</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="results-table">
+            <!-- Dummy Data -->
+            <tr>
+              <td>GeForce RTX 3080</td>
+              <td>PC Parts</td>
+              <td>$699</td>
+            </tr>
+            <tr>
+              <td>ASUS 4K Monitor</td>
+              <td>Monitors</td>
+              <td>$299</td>
+            </tr>
+            <tr>
+              <td>Logitech G Pro Mouse</td>
+              <td>Accessories</td>
+              <td>$89</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Comment Section -->
     <section class="comment-section">
       <h3>Share Your Thoughts</h3>
       <form class="comment-form">
@@ -67,12 +108,31 @@
         <p>No comments yet. Be the first to share your thoughts!</p>
       </div>
     </section>
-    
   </main>
 
   <footer>
     <p>&copy; 2024 Tech Shop. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    // Search functionality to filter through products based on search input
+    function performSearch() {
+      let query = document.getElementById('search-query').value.toLowerCase();
+      let rows = document.querySelectorAll("#results-table tr");
+
+      rows.forEach(row => {
+        let productName = row.cells[0].textContent.toLowerCase();
+        let category = row.cells[1].textContent.toLowerCase();
+        let price = row.cells[2].textContent.toLowerCase();
+
+        // Match even with partial or similar keywords
+        if (productName.includes(query) || category.includes(query) || price.includes(query)) {
+          row.style.display = ""; // Show row if it matches
+        } else {
+          row.style.display = "none"; // Hide row if it doesn't match
+        }
+      });
+    }
+  </script>
 </body>
 </html>
