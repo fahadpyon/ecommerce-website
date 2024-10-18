@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-  background-color: #8B00FF; /* Purple header */
+  background-color: #7B15A0; /* Purple header */
   color: white;
   text-align: center;
   padding: 20px;
@@ -37,7 +37,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #FFD700; /* Gold hover effect */
+  background-color: #7D3F95; /* Gold hover effect */
   border-radius: 5px;
 }
 
@@ -89,7 +89,7 @@ nav ul li a:hover {
 }
 
 .product-item {
-  background-color: #8B00FF; /* Purple box background */
+  background-color: #7B15A0; /* Purple box background */
   color: #FFD700; /* Yellow text */
   padding: 20px;
   border-radius: 8px;
