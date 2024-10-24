@@ -25,21 +25,33 @@ body {
 header {
   background-color: var(--primary-color);
   color: white;
-  text-align: center;
-  padding: 20px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Site Title */
+.header-title {
+  font-size: var(--font-size-medium);
+}
+
+/* Navigation Bar (Hotbar) */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  background-color: var(--accent-color);
   display: flex;
   justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   gap: 20px;
 }
 
@@ -50,7 +62,8 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 15px;
+  font-size: var(--font-size-small);
 }
 
 nav ul li a:hover {
@@ -63,18 +76,20 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 10px 0;
+  position: absolute;
+  right: 30px;
 }
 
 .search-form input {
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: var(--font-size-small);
+  width: 180px;
 }
 
 .search-form button {
-  padding: 10px 20px;
+  padding: 8px 12px;
   background-color: var(--secondary-color);
   color: white;
   border: none;
