@@ -1,216 +1,211 @@
+/* Define CSS variables at the top */
+:root {
+  --primary-color: #12ACDB; /* Light blue */
+  --secondary-color: #8893DB; /* Light purple */
+  --accent-color: #3B83DB; /* Medium blue */
+  --alternative-color: #0DDBC9; /* Teal */
+  --highlight-color: #7158DB; /* Violet */
+  --text-color: #333333; /* Dark text */
+  --background-color: #E5E5E5; /* Light gray background */
+  --font-size-large: 2.5em;
+  --font-size-medium: 1.3em;
+  --font-size-small: 1.1em;
+}
+
 /* Global Styles for Home Page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #E5E5E5; /* Light gray background */
-    color: #333333; /* Dark text color */
-  }
-  
-  /* Header */
-  header {
-    background-color: #8B00FF; /* Purple header */
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #1E90FF; /* Sea blue background for navigation */
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  nav ul li {
-    display: inline-block;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav ul li a:hover {
-    background-color: #FFD700; /* Gold hover effect */
-    border-radius: 5px;
-  }
-  
-  /* Hero Section */
-  .home-hero {
-    background-image: url('tech-hero.jpg'); /* Use your actual image path */
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .home-hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .home-hero p {
-    font-size: 1.3em;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  /* Featured Categories */
-  .home-featured-categories {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .home-featured-categories h3 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-  }
-  
-  .category-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .category-item {
-    background-color: #8B00FF; /* Purple box background */
-    color: #FFD700; /* Yellow text */
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .category-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(30, 144, 255, 0.3); /* Sea blue shadow */
-  }
-  
-  .category-item h4 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-  }
-  
-  /* Comment Section */
-  .comment-section {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .comment-section textarea {
-    width: 80%;
-    max-width: 600px;
-    height: 100px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1.1em;
-  }
-  
-  .comment-section button {
-    padding: 10px 20px;
-    background-color: #1E90FF; /* Sea blue button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    cursor: pointer;
-  }
-  
-  .comment-section button:hover {
-    background-color: #8B00FF; /* Purple hover effect */
-  }
-  
-  .no-comments {
-    font-size: 1.1em;
-    margin-top: 20px;
-    color: #333;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #1E90FF; /* Sea blue footer */
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  .search-bar {
-    text-align: center;
-    margin: 30px 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-.search-bar form {
-    display: inline-block;
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.search-bar input[type="text"] {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1.1em;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.search-bar button {
-    padding: 10px 20px;
-    background-color: #8B00FF; /* Purple button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    margin-left: 10px;
+nav ul li {
+  display: inline;
 }
 
-.search-bar button:hover {
-    background-color: #FFD700; /* Gold hover effect */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
 }
+
+nav ul li a:hover {
+  background-color: var(--highlight-color);
+  border-radius: 5px;
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.search-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: var(--font-size-small);
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Home Hero Section */
+.home-hero {
+  background-image: url('tech-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Featured Categories Section */
+.home-featured-categories {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.home-featured-categories h3 {
+  font-size: var(--font-size-large);
+  margin-bottom: 40px;
+}
+
+/* Category Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.category-item {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(30, 144, 255, 0.3); /* Sea blue shadow */
+}
+
+.category-item h4 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+/* Search Results Section */
 .search-results {
-  margin-top: 30px;
+  padding: 40px 20px;
 }
 
 .search-results table {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.search-results th, .search-results td {
+.search-results th,
+.search-results td {
   padding: 15px;
   border: 1px solid #ddd;
   text-align: left;
 }
 
 .search-results th {
-  background-color: #1E90FF; /* Sea blue header */
+  background-color: var(--accent-color);
   color: white;
 }
 
-.search-results td {
-  background-color: #f9f9f9; /* Light background */
+.search-results tr:hover {
+  background-color: #f1f1f1;
 }
 
-.search-results tr:hover {
-  background-color: #f1f1f1; /* Slight hover effect */
+/* Comment Section */
+.comment-section {
+  padding: 40px;
+  text-align: center;
 }
-  
+
+.comment-section textarea {
+  width: 80%;
+  max-width: 600px;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: var(--font-size-small);
+}
+
+.comment-section button {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: var(--primary-color);
+}
+
+.no-comments {
+  font-size: 1.1em;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--alternative-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

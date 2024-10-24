@@ -1,30 +1,50 @@
+/* Define CSS variables at the top */
+:root {
+  --primary-color: #12ACDB; /* Light blue */
+  --secondary-color: #8893DB; /* Light purple */
+  --accent-color: #3B83DB; /* Medium blue */
+  --alternative-color: #0DDBC9; /* Teal */
+  --highlight-color: #7158DB; /* Violet */
+  --text-color: #333333; /* Dark text */
+  --background-color: #E5E5E5; /* Light gray background */
+  --font-size-large: 2.5em;
+  --font-size-medium: 1.3em;
+  --font-size-small: 1.1em;
+}
+
 /* Global Styles for About Page */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #E5E5E5; /* Light gray background */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Header */
 header {
-  background-color: #8B00FF; /* Purple header */
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background-color: #1E90FF; /* Sea blue background for navigation */
-  text-align: center;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav ul li {
   display: inline;
-  margin-right: 20px;
 }
 
 nav ul li a {
@@ -34,12 +54,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #FFD700; /* Yellow hover effect */
+  background-color: var(--highlight-color);
+  border-radius: 5px;
 }
 
 /* Hero Section */
 .about-hero {
-  background-image: url('about-hero.jpg'); /* Use your actual image path */
+  background-image: url('about-hero.jpg');
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -51,36 +72,20 @@ nav ul li a:hover {
   padding: 50px 20px;
 }
 
-.about-hero h2 {
-  font-size: 2.5em;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.about-hero p {
-  font-size: 1.3em;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 10px;
-  border-radius: 5px;
-}
-
 /* About Content */
 .about-content {
   padding: 50px 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .about-content div {
-  background-color: #8B00FF; /* Purple background */
+  background-color: var(--secondary-color);
   padding: 20px;
-  margin: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  min-width: 250px;
+  text-align: center;
 }
 
 .about-content div:hover {
@@ -91,12 +96,12 @@ nav ul li a:hover {
 .about-content h3 {
   font-size: 1.8em;
   margin-bottom: 10px;
-  color: #FFD700; /* Yellow for big headings */
+  color: var(--highlight-color);
 }
 
 .about-content p, .about-content ul {
-  font-size: 1.2em;
-  color: #E5E5E5; /* Light gray for smaller text */
+  font-size: var(--font-size-small);
+  color: var(--text-color);
 }
 
 .about-content ul {
@@ -110,8 +115,11 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-  background-color: #1E90FF; /* Sea blue footer */
+  background-color: var(--alternative-color);
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
