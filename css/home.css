@@ -25,16 +25,11 @@ body {
 header {
   background-color: var(--primary-color);
   color: white;
-  padding: 15px 30px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-}
-
-/* Site Title */
-.header-title {
-  font-size: var(--font-size-medium);
+  flex-wrap: wrap;
 }
 
 /* Navigation Bar (Hotbar) */
@@ -43,6 +38,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav ul {
@@ -53,6 +49,7 @@ nav ul {
   margin: 0;
   padding: 0;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -76,8 +73,6 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  position: absolute;
-  right: 30px;
 }
 
 .search-form input {
@@ -85,7 +80,7 @@ nav ul li a:hover {
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: var(--font-size-small);
-  width: 180px;
+  width: 200px;
 }
 
 .search-form button {
@@ -102,24 +97,24 @@ nav ul li a:hover {
   background-image: url('tech-hero.jpg');
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 300px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px;
 }
 
 /* Featured Categories Section */
 .home-featured-categories {
-  padding: 50px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
 .home-featured-categories h3 {
   font-size: var(--font-size-large);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* Category Grid */
@@ -137,33 +132,22 @@ nav ul li a:hover {
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.category-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(30, 144, 255, 0.3); /* Sea blue shadow */
-}
-
-.category-item h4 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
 }
 
 /* Search Results Section */
 .search-results {
-  padding: 40px 20px;
+  padding: 20px;
+  overflow-x: auto;
 }
 
 .search-results table {
   width: 100%;
   border-collapse: collapse;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .search-results th,
 .search-results td {
-  padding: 15px;
+  padding: 10px;
   border: 1px solid #ddd;
   text-align: left;
 }
@@ -173,25 +157,19 @@ nav ul li a:hover {
   color: white;
 }
 
-.search-results tr:hover {
-  background-color: #f1f1f1;
-}
-
 /* Comment Section */
 .comment-section {
-  padding: 40px;
+  padding: 30px 20px;
   text-align: center;
 }
 
 .comment-section textarea {
-  width: 80%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 500px;
   height: 100px;
-  margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: var(--font-size-small);
 }
 
 .comment-section button {
@@ -200,17 +178,7 @@ nav ul li a:hover {
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: var(--font-size-medium);
   cursor: pointer;
-}
-
-.comment-section button:hover {
-  background-color: var(--primary-color);
-}
-
-.no-comments {
-  font-size: 1.1em;
-  margin-top: 20px;
 }
 
 /* Footer */
@@ -219,8 +187,30 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form {
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-featured-categories h3 {
+    font-size: var(--font-size-medium);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
